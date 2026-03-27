@@ -17,14 +17,14 @@ def adicionar_tarefa(tarefas):
     titulo = input("Digite a tarefa: ")
     tarefas.append({"titulo": titulo, "concluida": False})
     salvar_tarefas(tarefas)
-    print("✅ Tarefa adicionada!")
+    print("Tarefa adicionada!")
 
 def listar_tarefas(tarefas):
     if not tarefas:
         print("Nenhuma tarefa encontrada.")
         return
     for i, tarefa in enumerate(tarefas):
-        status = "✔️" if tarefa["concluida"] else "❌"
+        status = "Concluída" if tarefa["concluida"] else "Pendente"
         print(f"{i} - {tarefa['titulo']} [{status}]")
 
 def concluir_tarefa(tarefas):
@@ -33,9 +33,9 @@ def concluir_tarefa(tarefas):
         indice = int(input("Digite o número da tarefa para concluir: "))
         tarefas[indice]["concluida"] = True
         salvar_tarefas(tarefas)
-        print("✅ Tarefa concluída!")
+        print("Tarefa concluída!")
     except:
-        print("❌ Índice inválido.")
+        print("Índice inválido.")
 
 def remover_tarefa(tarefas):
     listar_tarefas(tarefas)
@@ -43,9 +43,9 @@ def remover_tarefa(tarefas):
         indice = int(input("Digite o número da tarefa para remover: "))
         tarefas.pop(indice)
         salvar_tarefas(tarefas)
-        print("🗑️ Tarefa removida!")
+        print("Tarefa removida!")
     except:
-        print("❌ Índice inválido.")
+        print("Índice inválido.")
 
 def menu():
     tarefas = carregar_tarefas()
