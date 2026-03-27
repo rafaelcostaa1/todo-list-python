@@ -17,7 +17,7 @@ Projeto simples de lista de tarefas desenvolvido em Python, com armazenamento em
 ## Como executar
 
 1. Clone o repositório:
-git clone https://github.com/seu-usuario/todo-list.git
+git clone https://github.com/rafaelcostaa1/todo-list.git
 
 2. Acesse a pasta do projeto:
 cd todo-list
